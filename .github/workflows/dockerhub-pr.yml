@@ -2,9 +2,6 @@ on:
   pull_request:
 
 name: Publish Docker image
-on:
-  release:
-    types: [published]
 jobs:
   push_to_registry:
     name: Push Docker image to Docker Hub
