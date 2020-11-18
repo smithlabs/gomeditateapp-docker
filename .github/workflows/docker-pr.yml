@@ -14,7 +14,7 @@ jobs:
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: docker build gomeditateapp with PR tag
       run: |
-        sudo docker build -t gomeditateapp:pr_build .
+        sudo docker build -t smithlabs/gomeditateapp:pr_build .
     - name: docker push
       run: |
         docker push smithlabs/gomeditateapp:pr_build
