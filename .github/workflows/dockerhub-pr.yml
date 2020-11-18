@@ -1,6 +1,5 @@
 on:
   pull_request:
-    branches: main
 
 name: Publish Docker image
 on:
