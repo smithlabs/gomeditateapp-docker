@@ -15,4 +15,6 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: smithlabs/gomeditateapp
-          tag_with_ref: true
+          context: .
+          file: ./Dockerfile
+          tags: ${{ steps.docker_meta.outputs.tags }}
