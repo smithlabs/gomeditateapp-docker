@@ -1,0 +1,21 @@
+on: 
+  pull_request
+
+name: Build PR For DockerHub
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: docker login
+      env:
+        DOCKER_USER: ${{ secrets.DOCKER_HUB_USERNAME }}   
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}  
+      run: |
+        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+    - name: docker build gomeditateapp with PR tag
+      run: |
+        sudo docker build -t smithlabs/gomeditateapp:pr_build .
+    - name: docker push
+      run: |
+        docker push smithlabs/gomeditateapp:pr_build
