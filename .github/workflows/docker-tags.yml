@@ -1,0 +1,35 @@
+# On pull request
+# Build the project and tag it as smithlabs/gomeditateapp:pr_build 
+# Push this tag to DockerHub
+
+on: 
+  pull_request
+
+name: Build PR For DockerHub
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: docker login
+      env:
+        DOCKER_USER: ${{ secrets.DOCKER_HUB_USERNAME }}   
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}  
+      run: |
+        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+    - name: docker build gomeditateapp with PR tag
+      run: |
+        # Strip git ref prefix from version
+        VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+        
+        # Strip "v" prefix from tag name
+        [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
+        
+        # Echo the output of VERSION
+        echo VERSION=$VERSION
+        
+        # Build and tag
+        sudo docker build -t smithlabs/gomeditateapp:pr_build-$VERSION .
+    - name: docker push
+      run: |
+        docker push smithlabs/gomeditateapp:pr_build-$VERSION
