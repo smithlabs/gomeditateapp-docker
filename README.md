@@ -20,11 +20,11 @@ View my [smithlabs/gomeditate-terraform](https://github.com/smithlabs/gomeditate
 
 This following GitHub Actions are setup.
 
-| Event        | Description                                                     | DockerHub                        | GitHub Action                                                                                                             |
-|--------------|-----------------------------------------------------------------|----------------------------------|---------------------------------------------------------------------------------------------------------------------------|
-| Main commit  | Builds and pushes image to DockerHub with latest tag.           | smithlabs/gomeditateapp:latest   | [docker-latest.yml(smithhttps://github.com/smithlabs/gomeditateapp-docker/blob/main/.github/workflows/docker-latest.yml) |
-| Pull request | Builds and pushes the image to DockerHub with the pr_build tag. | smithlabs/gomeditateapp:pr_build | [docker-pr.yml](https://github.com/smithlabs/gomeditateapp-docker/blob/main/.github/workflows/docker-pr.yml)              |
-| Tagging      | Builds and pushes image to DockerHub with the matching tag.     | smithlabs/gomeditateapp:1.0.0    | [docker-tags.yml](https://github.com/smithlabs/gomeditateapp-docker/blob/main/.github/workflows/docker-tags.yml)          |
+| Event | Description | DockerHub | GitHub Action |
+|-|-|-|-|
+| Main commit | Build and pushes image to DockerHub with latest tag. | smithlabs/gomeditateapp:latest | [docker-latest.yml](smithhttps://github.com/smithlabs/gomeditateapp-docker/blob/main/.github/workflows/docker-latest.yml) |
+| Tagging | Build and pushes image to DockerHub with the matching tag. | smithlabs/gomeditateapp:1.0.0 | [docker-tags.yml](https://github.com/smithlabs/gomeditateapp-docker/blob/main/.github/workflows/docker-tags.yml) |
+| Pull request | Builds and pushes the image to DockerHub with the pr_build tag. | smithlabs/gomeditateapp:pr_build | [docker-pr.yml](https://github.com/smithlabs/gomeditateapp-docker/blob/main/.github/workflows/docker-pr.yml) |
 
 
 ## 🐾 Pre-requisites
