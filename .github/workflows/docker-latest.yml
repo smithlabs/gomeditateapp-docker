@@ -1,5 +1,6 @@
-# When code is committed to main, build an image tagged latest
-# Build the project and tag it as smithlabs/gomeditateapp:latest
+# When code is committed to the main brain, build an image tagged latest
+# The latest branch should not be used in production projects.
+# DockerHub tag smithlabs/gomeditateapp:latest
 # Push this tag to DockerHub
 
 on:
