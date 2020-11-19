@@ -30,6 +30,6 @@ jobs:
         
         # Build and tag
         sudo docker build -t smithlabs/gomeditateapp:pr_build-$VERSION .
-    - name: docker push
-      run: |
+        
+        # Push to DockerHub
         docker push smithlabs/gomeditateapp:pr_build-$VERSION
