@@ -18,9 +18,13 @@ View my [smithlabs/gomeditate-terraform](https://github.com/smithlabs/gomeditate
 
 ## 🔭 Overview
 
-This project has the following GitHub Actions configured.
+This following GitHub Actions are setup.
 
-- [On pull request](https://github.com/smithlabs/gomeditateapp-docker/blob/main/.github/workflows/docker-pr.yml): Builds and pushes a Docker image with `smithlabs/gomeditateapp:pr_build` tag to DockerHub.
+| Event        | Description                                                     | DockerHub                        | GitHub Action                                                                                                             |
+|--------------|-----------------------------------------------------------------|----------------------------------|---------------------------------------------------------------------------------------------------------------------------|
+| Main commit  | Builds and pushes image to DockerHub with latest tag.            | smithlabs/gomeditateapp:latest   | [docker-latest.yml](smithhttps://github.com/smithlabs/gomeditateapp-docker/blob/main/.github/workflows/docker-latest.yml) |
+| Tagging      | Builds and pushes image to DockerHub with the matching tag.      | smithlabs/gomeditateapp:1.0.0    | [docker-tags.yml](https://github.com/smithlabs/gomeditateapp-docker/blob/main/.github/workflows/docker-tags.yml)          |
+| Pull request | Builds and pushes the image to DockerHub with the pr_build tag. | smithlabs/gomeditateapp:pr_build | [docker-pr.yml](https://github.com/smithlabs/gomeditateapp-docker/blob/main/.github/workflows/docker-pr.yml)              |
 
 
 ## 🐾 Pre-requisites
