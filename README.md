@@ -8,9 +8,6 @@ View the [web application](http://gma-dockerhub-162650346.us-east-1.elb.amazonaw
 
 View my [smithlabs/gomeditate-terraform](https://github.com/smithlabs/gomeditateapp-terraform) repo with full code for the Terraform and AWS deploy.
 
-
-
-
 ## 🛰️ Technologies
 
 ![Docker](https://img.shields.io/badge/-Docker-black?style=flat-square&logo=docker)
@@ -18,6 +15,12 @@ View my [smithlabs/gomeditate-terraform](https://github.com/smithlabs/gomeditate
 ![JavaScript](https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript)
 ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=css3)
 ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+
+## 🔭 Overview
+
+This project has the following GitHub Actions configured.
+
+- [On pull request](https://github.com/smithlabs/gomeditateapp-docker/blob/main/.github/workflows/docker-pr.yml): Builds and pushes a Docker image with `smithlabs/gomeditateapp:pr_build` tag to DockerHub.
 
 
 ## 🐾 Pre-requisites

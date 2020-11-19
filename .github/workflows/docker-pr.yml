@@ -1,3 +1,7 @@
+# On all pull requests
+# Build the project and tag it as smithlabs/gomeditateapp:pr_build 
+# Push this tag to DockerHub
+
 on: 
   pull_request
 
