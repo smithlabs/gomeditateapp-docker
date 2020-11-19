@@ -1,0 +1,26 @@
+# When code is committed to main, build an image tagged latest
+# Build the project and tag it as smithlabs/gomeditateapp:latest
+# Push this tag to DockerHub
+
+on:
+ push:
+
+name: Build latest tag for DockerHub
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: docker login
+      env:
+        DOCKER_USER: ${{ secrets.DOCKER_HUB_USERNAME }}   
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}  
+      run: |
+        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+    - name: docker build gomeditateapp with tag
+      run: |
+        # Build and tag
+        sudo docker build -t smithlabs/gomeditateapp:latest .
+        
+        # Push to DockerHub
+        docker push smithlabs/gomeditateapp:latest
