@@ -36,7 +36,7 @@ You must have [Docker](https://docs.docker.com/get-docker/) installed on your co
 
 **Method One**: Pull the container from my [Dockerhub](https://hub.docker.com/repository/docker/smithlabs/gomeditateapp)
 ``` bash
-sudo docker run --rm --name app -d -p 8080:8080 smithlabs/gomeditateapp:1.0
+sudo docker run --rm --name app -d -p 8080:8080 smithlabs/gomeditateapp:1.0.0
 ```
 
 Access the web app in your browser: http://localhost:8080
