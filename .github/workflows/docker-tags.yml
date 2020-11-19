@@ -1,9 +1,11 @@
-# On pull request
-# Build the project and tag it as smithlabs/gomeditateapp:pr_build 
+# When a new tag is pushed to main in the "v*.*.*" format
+# Build the project and tag it as smithlabs/gomeditateapp:<version>
 # Push this tag to DockerHub
 
-on: 
-  pull_request
+on:
+ push:
+   tags:
+     - "v*.*.*"
 
 name: Build Tags For DockerHub
 jobs:
@@ -17,7 +19,7 @@ jobs:
         DOCKER_PASSWORD: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}  
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-    - name: docker build gomeditateapp with PR tag
+    - name: docker build gomeditateapp with tag
       run: |
         # Strip git ref prefix from version
         VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
@@ -29,7 +31,7 @@ jobs:
         echo VERSION=$VERSION
         
         # Build and tag
-        sudo docker build -t smithlabs/gomeditateapp:pr_build-$VERSION .
+        sudo docker build -t smithlabs/gomeditateapp:$VERSION .
         
         # Push to DockerHub
-        docker push smithlabs/gomeditateapp:pr_build-$VERSION
+        docker push smithlabs/gomeditateapp:$VERSION
