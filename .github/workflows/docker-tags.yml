@@ -1,4 +1,5 @@
-# When a new tag is pushed to main in the "v*.*.*" format
+# When a new tag is pushed to main in the semantic format e.g. "v*.*.*" 
+# Build an image with that tag. e.g. v1.0.0.0 becomes gomeditateapp:1.0.0
 # Build the project and tag it as smithlabs/gomeditateapp:<version>
 # Push this tag to DockerHub
 
