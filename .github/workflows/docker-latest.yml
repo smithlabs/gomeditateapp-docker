@@ -5,6 +5,7 @@
 
 on:
  push:
+   branches: main
 
 name: Build latest tag for DockerHub
 jobs:
