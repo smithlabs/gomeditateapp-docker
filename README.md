@@ -1,6 +1,7 @@
 # gomeditateapp-docker
 
 ![Dancing Gopher](https://github.com/smithlabs/github-assets/blob/main/gif/gomeditationapp.gif)
+
 A [Dockerized](https://www.docker.com/) meditation timer web app written in [Golang](https://golang.org/), [JavaScript](https://www.javascript.com/), [CSS](https://www.w3schools.com/css/), and [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5). 
 
 **Links**
