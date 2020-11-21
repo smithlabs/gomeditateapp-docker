@@ -2,10 +2,6 @@
 
 ![Dancing Gopher](https://github.com/smithlabs/github-assets/blob/main/gif/gomeditateapp.gif)
 
-![Rain](https://github.com/smithlabs/github-assets/raw/main/gif/rain.gif)
-
-![Beach](https://github.com/smithlabs/github-assets/blob/main/gif/beach.gif)
-
 A [Dockerized](https://www.docker.com/) meditation timer web app written in [Golang](https://golang.org/), [JavaScript](https://www.javascript.com/), [CSS](https://www.w3schools.com/css/), and [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5). 
 
 **Links**
@@ -47,6 +43,7 @@ sudo docker run --rm --name app -d -p 8080:8080 smithlabs/gomeditateapp:1.0.0
 
 Access the web app in your browser: http://localhost:8080
 
+![Rain](https://github.com/smithlabs/github-assets/raw/main/gif/rain.gif)
 
 Clean up when done.
 ``` bash
@@ -62,6 +59,8 @@ sudo docker run --rm --name app -d -p 8080:8080 gomeditateapp
 ```
 
 Access the web app in your browser: http://localhost:8080
+
+![Beach](https://github.com/smithlabs/github-assets/blob/main/gif/beach.gif)
 
 Clean up when done.
 ``` bash
