@@ -13,9 +13,11 @@
 <body>
   <div class="app">
     <div class="vid-container">
-      <video loop>
-        <source src="./video/rain.mp4" type="video/mp4">
-      </video>
+      <!--<video controls="true" loop playsinline style="z-index: 1; ">-->
+      <!--  <source src="./video/rain.mp4" type="video/mp4">-->
+      <!--</video>-->
+      
+      <video loop autoplay playsinline width='100%' height='100%' src='./video/rain.mp4' type='video/mp4'></video>
     </div>
     <div class="time-select">
       <button data-time="120">2 Minutes</button>
@@ -28,7 +30,7 @@
       </audio>
 
       <div id="player-buttons-container">
-        <img src="./svg/play.svg" class="play"></img>
+        <img src="./svg/play.svg" class="play" />
         <svg class="track-outline" width="453" height="453" viewBox="0 0 453 453" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <circle cx="226.5" cy="226.5" r="216.5" stroke="white" stroke-width="20" />
@@ -38,7 +40,7 @@
           <circle cx="226.5" cy="226.5" r="216.5" stroke="#018EBA" stroke-width="20" />
         </svg>
 
-        <img src="./svg/replay.svg" class="replay"></img>
+        <img src="./svg/replay.svg" class="replay" />
       </div>
 
       <div id="player-display-time">
