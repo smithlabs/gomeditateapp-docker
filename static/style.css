@@ -139,7 +139,7 @@ video {
   .time-select,
   .sound-picker {
     height: auto;
-    min-height: 100px;
+    min-height: 60px;
     flex-direction: row;
   }
 
@@ -156,5 +156,9 @@ video {
   #player-buttons-container img.play {
     width: 70px;
     margin-left: 5px;
+  }
+
+  .sound-picker {
+    margin-top: -40px;
   }
 }
