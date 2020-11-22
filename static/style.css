@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background: #000;
-}
-
 .app {
   height: 100vh;
   display: flex;
@@ -99,10 +95,10 @@ video {
   position: fixed;
   top: 0%;
   left: 0%;
-  width: 100%;
   z-index: -10;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
 }
 
 #player-buttons-container {
@@ -122,7 +118,8 @@ video {
 }
 
 #player-buttons-container img.play {
-  top: 30px;
+  top: 40px;
+  margin-left: 5px;
 }
 
 #player-buttons-container img.replay {
@@ -148,5 +145,16 @@ video {
 
   .time-select button {
     min-height: 60px;
+  }
+
+  .player-container {
+    height: 50%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  #player-buttons-container img.play {
+    width: 70px;
+    margin-left: 5px;
   }
 }
