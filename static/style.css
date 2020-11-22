@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background: #000;
+}
+
 .app {
   height: 100vh;
   display: flex;
@@ -32,6 +36,11 @@
   cursor: pointer;
   border: 2px solid white;
   transition: all 0.5s ease;
+}
+
+.time-select button:focus,
+.sound-picker button:focus {
+  outline: none;
 }
 
 .sound-picker button {
@@ -68,10 +77,13 @@
 
 .player-container svg {
   position: absolute;
-  height: 50%;
-  top: 50%;
+  height: 100%;
+  width: auto;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(-90deg);
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg); */
+  transform:translateX(-50%);
   pointer-events: none;
 }
 .player-container svg circle {
@@ -79,7 +91,6 @@
 }
 .time-display {
   color: white;
-  position: absolute;
   font-size: 50px;
   bottom: 10%;
 }
@@ -90,4 +101,52 @@ video {
   left: 0%;
   width: 100%;
   z-index: -10;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#player-buttons-container {
+  height: 50%;
+  width: 100%;
+  position: relative;
+}
+
+#player-display-time .time-display {
+  margin-top: -30px;
+}
+
+#player-buttons-container img {
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+#player-buttons-container img.play {
+  top: 30px;
+}
+
+#player-buttons-container img.replay {
+  bottom: 30px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .app {
+    flex-wrap: wrap;
+  }
+
+  .time-select, .sound-picker, .player-container {
+    flex-grow: 1;
+    flex-basis: 100%;
+  }
+
+  .time-select,
+  .sound-picker {
+    height: auto;
+    min-height: 100px;
+    flex-direction: row;
+  }
+
+  .time-select button {
+    min-height: 60px;
+  }
 }
