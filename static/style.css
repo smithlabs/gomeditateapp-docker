@@ -129,6 +129,7 @@ video {
 @media only screen and (max-width: 1024px) {
   .app {
     flex-wrap: wrap;
+    align-items: flex-start;
   }
 
   .time-select, .sound-picker, .player-container {
@@ -159,6 +160,10 @@ video {
   }
 
   .sound-picker {
-    margin-top: -40px;
+    margin-top: -100px;
+  }
+
+  .time-select {
+    padding-top: 30px;
   }
 }
