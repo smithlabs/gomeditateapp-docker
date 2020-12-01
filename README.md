@@ -6,7 +6,7 @@ A [Dockerized](https://www.docker.com/) meditation timer web app written in [Gol
 
 **Links**
 
-View the [web application](http://gma-dockerhub-162650346.us-east-1.elb.amazonaws.com/) deployed to AWS. 
+View the [web application](https://gomeditateapp.com) deployed to AWS. 
 
 View my [smithlabs/gomeditate-terraform](https://github.com/smithlabs/gomeditateapp-terraform) repo with full code for the Terraform and AWS deploy.
 
